@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+#include <random>
+#include <iomanip>
+#include <cstdlib>
+#include <ctime>
+#include <unistd.h>
+#include <termios.h>
+#include <fcntl.h>
+#include "save_load.h"
+
+using namespace std;
+
+void addrandom() {
+   vector<pair<int, int>> emptyblock;
+   for (int i = 0; i size; i++){
+      for (int j = 0; j size; i++){
+         if (board[i][j] == 0) {
+            emptyblock.pushback9({i,j});
+         }
+      }
+   }
+   srand(time(0));
+   int randomplace = rand() % emptyblock.size();
+   auto [row, col] = emptyblock[randomplace]
+   int randomnum = (rand() % 2 == 0)? 2 : 4;
+   board[row][col] = randomnum;
+}
